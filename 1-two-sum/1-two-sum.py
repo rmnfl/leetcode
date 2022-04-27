@@ -7,5 +7,4 @@ class Solution:
                 return [i, dict_nums[target-num]]
             else:
                 dict_nums[num] = i
-            
-                
+               
