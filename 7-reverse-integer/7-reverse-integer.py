@@ -9,4 +9,3 @@ class Solution:
                 return res
         else:
             return 0
-    
