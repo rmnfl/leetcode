@@ -10,4 +10,3 @@ class Solution:
             num %= n
             
         return result
-    
