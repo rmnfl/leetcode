@@ -4,7 +4,7 @@ class Solution:
         while i < j:        
             if not s[i].isalnum():
                 i += 1
-            elif i < j and not s[j].isalnum():
+            elif not s[j].isalnum():
                 j -= 1
             elif s[i].lower() != s[j].lower():
                 return False
