@@ -6,4 +6,3 @@ class Solution:
             prev1, prev2 = max(prev2 + num, prev1), prev1
         
         return prev1
-    
