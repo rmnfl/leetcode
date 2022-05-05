@@ -1,8 +1,5 @@
 class Solution:
     def rob(self, nums: List[int]) -> int:
-        if not len(nums):
-            return 0
-        
         prev1 = 0
         prev2 = 0
         
