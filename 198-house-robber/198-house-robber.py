@@ -1,5 +1,7 @@
 class Solution:
     def rob(self, nums: List[int]) -> int:
+        if not len(nums):
+            return 0
         prev1 = prev2 = 0
         
         for num in nums:
