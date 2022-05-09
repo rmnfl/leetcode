@@ -13,3 +13,4 @@ class Solution:
             max_product = max(max_product, imax)
         
         return max_product
+    
