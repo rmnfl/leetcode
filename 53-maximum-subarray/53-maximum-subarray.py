@@ -8,4 +8,3 @@ class Solution:
             best_sum = max(cur_sum, best_sum)
             
         return best_sum
-    
