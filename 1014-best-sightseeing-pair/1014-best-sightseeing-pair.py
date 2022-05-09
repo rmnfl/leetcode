@@ -6,4 +6,3 @@ class Solution:
             cur = max(cur, value) - 1
             
         return res
-    
