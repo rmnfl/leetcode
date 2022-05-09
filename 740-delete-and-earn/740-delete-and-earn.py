@@ -7,3 +7,4 @@ class Solution:
             prev, curr = curr, max(prev+points[i]*i, curr)
             
         return max(prev, curr)
+    
