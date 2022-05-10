@@ -6,8 +6,6 @@ class Solution:
         for i, p in enumerate(prices):
             if prev < p:
                 profit += p - prev
-            
             prev = p
-            # print(prev, p, profit)
-        
+            
         return profit
