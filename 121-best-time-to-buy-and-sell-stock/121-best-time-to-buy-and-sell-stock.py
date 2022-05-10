@@ -9,6 +9,5 @@ class Solution:
                 result = max(result, sell - buy)
             elif p < buy:
                 buy = sell = p
-            # print(buy, sell, result, p)
                 
         return result
