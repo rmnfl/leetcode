@@ -7,3 +7,4 @@ class Solution:
             buy, sell = max(buy, sell - p), max(sell, buy + p - fee)
             
         return sell
+    
