@@ -6,6 +6,5 @@ class Solution:
         
         for price in prices:
             hold, sell, sell_cd = max(hold, sell - price), max(sell, sell_cd), hold + price
-            # print(hold, sell, sell_cd)
-            
+
         return max(sell, sell_cd)
