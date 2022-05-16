@@ -16,4 +16,3 @@ class Solution:
                 p5 += 1
             
         return dp[-1]
-    
