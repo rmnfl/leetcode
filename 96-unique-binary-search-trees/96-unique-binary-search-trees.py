@@ -6,4 +6,3 @@ class Solution:
             for j in range(i):
                 res[i] += res[j] * res[i-1-j]
         return res[n]
-    
