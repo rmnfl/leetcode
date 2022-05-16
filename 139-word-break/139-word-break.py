@@ -11,6 +11,7 @@ class Solution:
                     continue
                 if (dp[j] and s[j:i] in wordDict):
                     dp[i] = True
+                    break
                     
         return dp[-1]
         
