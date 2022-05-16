@@ -7,6 +7,6 @@ class Solution:
             for j in range(i):
                 if (dp[j] and s[j:i] in wordDict):
                     dp[i] = True
-                    break
                     
         return dp[-1]
+    
