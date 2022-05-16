@@ -3,7 +3,7 @@ class Solution:
         dp = [0] * (len(s) + 1)
         dp[0] = True
         max_len = max(map(len, wordDict))
-        print(max_len)
+        wordDict = set(wordDict)
         
         for i in range(len(s) + 1):
             for j in range(i):
