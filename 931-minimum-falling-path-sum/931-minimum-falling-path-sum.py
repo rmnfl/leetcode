@@ -11,3 +11,4 @@ class Solution:
                 matrix[i][j] += min(left, mid, right)
                 
         return min(matrix[-1])
+    
