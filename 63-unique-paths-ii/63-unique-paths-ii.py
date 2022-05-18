@@ -19,3 +19,4 @@ class Solution:
                 dp[i][j] = dp[i-1][j] + dp[i][j-1] if obstacleGrid[i][j] == 0 else 0
                 
         return dp[-1][-1]
+    
