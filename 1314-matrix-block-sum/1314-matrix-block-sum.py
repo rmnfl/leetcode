@@ -17,4 +17,3 @@ class Solution:
                 ans[i][j] = dp[r2][c2] - dp[r2][c1] - dp[r1][c2] + dp[r1][c1]
                 
         return ans
-    
