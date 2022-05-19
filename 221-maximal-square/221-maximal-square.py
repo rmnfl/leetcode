@@ -13,4 +13,3 @@ class Solution:
                 max_value = max(max_value, dp[i+1][j+1])
                 
         return max_value**2
-    
