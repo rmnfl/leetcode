@@ -16,4 +16,3 @@ class Solution:
                 dp[i][j] = min(dp[i-1][j], dp[i][j-1]) + grid[i][j]
         
         return dp[-1][-1]
-    
