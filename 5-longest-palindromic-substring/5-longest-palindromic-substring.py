@@ -13,4 +13,3 @@ class Solution:
             r += 1
                 
         return s[l+1:r]
-           
