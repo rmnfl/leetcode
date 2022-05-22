@@ -1,6 +1,6 @@
 class Solution:
     def longestPalindrome(self, s: str) -> str:           
-        dp = [[False for _ in range(len(s))] for _ in range(len(s))]
+        dp = [[False] * len(s) for _ in range(len(s))]
         ans = s[0]
         
         for i in range(len(s)):
