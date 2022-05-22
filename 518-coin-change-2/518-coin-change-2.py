@@ -8,9 +8,7 @@ class Solution:
             new_dp[0] = 1
             
             for j in range(amount+1):
-                new_dp[j] = dp[j]
                 if j - coins[i] >= 0:
-                    new_dp[j] += new_dp[j - coins[i]]
-            dp = new_dp
+                    dp[j] += dp[j - coins[i]]
             
         return dp[-1]
