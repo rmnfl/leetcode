@@ -8,10 +8,9 @@ class Solution:
                 
         for i in range(len(s)-1, -1, -1):
             for j in range(i+1, len(s)):
-                if s[i]==s[j]:
-                    if j-i==1 or dp[i+1][j-1]:
+                if s[i]==s[j] and (dp[i+1][j-1] or j==i+1):
                         dp[i][j] = True
-                        if j-i+1 > len(ans):
+                        if len(ans) < j-i+1:
                             ans = s[i:j+1]
         
         return ans
