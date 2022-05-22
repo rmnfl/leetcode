@@ -1,30 +1,16 @@
 class Solution:
     def longestPalindrome(self, s: str) -> str:           
-        dp = [[False]*len(s) for _ in range(len(s)) ]
+        ans = s[0]
         
         for i in range(len(s)):
-            dp[i][i]=True
-        ans=s[0]
-        
-        for j in range(len(s)):
-            for i in range(j):
-                if s[i]==s[j] and (dp[i+1][j-1] or j==i+1):
-                    dp[i][j]=True
-                    if j-i+1>len(ans):
-                        ans=s[i:j+1]
+            ans = max(ans, self.expandAroundCenter(s, i, i), self.expandAroundCenter(s, i, i+1), key = len)
+            
         return ans
         
-#         dp = [[False] * len(s) for _ in range(len(s))]
-#         ans = s[0]
-        
-#         for i in range(len(s)):
-#             dp[i][i] = True
+    def expandAroundCenter(self, s, l, r):
+        while l >= 0 and r < len(s) and s[l]==s[r]:
+            l -= 1
+            r += 1
                 
-#         for i in range(len(s)-1, -1, -1):
-#             for j in range(i+1, len(s)):
-#                 if s[i]==s[j] and (dp[i+1][j-1] or j==i+1):
-#                         dp[i][j] = True
-#                         if len(ans) < j-i+1:
-#                             ans = s[i:j+1]
-        
-#         return ans
+        return s[l+1:r]
+            
