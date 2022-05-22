@@ -9,6 +9,5 @@ class Solution:
             elif nums[i] < nums[i-1]:
                 down = up + 1
                 
-                
         return max(up, down)
     
