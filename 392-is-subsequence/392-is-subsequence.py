@@ -8,4 +8,3 @@ class Solution:
             r1 -= 1
             
         return r2 < 0
-    
