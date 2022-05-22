@@ -9,4 +9,3 @@ class Solution:
                     dp[i] += dp[i-j]
                     
         return dp[-1]
-                
