@@ -17,4 +17,3 @@ class Solution:
                 down[i] = down[i-1] 
                 
         return max(up[-1], down[-1])
-    
