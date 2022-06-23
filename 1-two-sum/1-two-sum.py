@@ -1,10 +1,9 @@
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        dict_nums = {}
+class Solution(object):
+    def twoSum(self, nums, target):
+        nums_dict = {}
         
-        for i, num in enumerate(nums):
-            if target-num in dict_nums:
-                return [i, dict_nums[target-num]]
-            else:
-                dict_nums[num] = i
-               
+        for i, n in enumerate(nums):
+            if target - n in nums_dict:
+                return [nums_dict[target - n], i]
+            nums_dict[n] = i
+        
