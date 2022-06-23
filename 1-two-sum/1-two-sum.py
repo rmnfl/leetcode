@@ -6,3 +6,4 @@ class Solution(object):
             if target - n in nums_dict:
                 return [nums_dict[target - n], i]
             nums_dict[n] = i
+        
