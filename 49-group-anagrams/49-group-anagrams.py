@@ -3,9 +3,6 @@ class Solution(object):
         anagrams = defaultdict(list)
         
         for s in strs:
-            counter = [0] * 26
-            for c in s:
-                counter[ord(c) - ord("a")] += 1
-            anagrams[tuple(counter)].append(s)
+            anagrams[str(sorted(s))].append(s)
     
         return anagrams.values()
