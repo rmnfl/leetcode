@@ -6,4 +6,3 @@ class Solution(object):
             anagrams["".join(sorted(s))].append(s)
     
         return anagrams.values()
-    
