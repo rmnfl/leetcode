@@ -12,4 +12,3 @@ class Solution(object):
                 result.append(n)
                 if len(result) == k:
                     return result
-        
