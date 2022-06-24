@@ -12,5 +12,4 @@ class Solution(object):
 #                 result.append(n)
 #                 if len(result) == k:
 #                     return result
-
         return list(zip(*Counter(nums).most_common(k) ))[0]
