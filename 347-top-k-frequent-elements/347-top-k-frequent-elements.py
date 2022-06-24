@@ -11,4 +11,3 @@ class Solution(object):
             result.append(heapq.heappop(heap)[1])
             
         return result
-    
