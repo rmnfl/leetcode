@@ -11,4 +11,3 @@ class Solution(object):
             postfix *= nums[i]
         
         return answer
-    
