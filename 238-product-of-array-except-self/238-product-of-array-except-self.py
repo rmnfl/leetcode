@@ -14,3 +14,4 @@ class Solution(object):
             answer[i] = prefix[i]*postfix[i]
         
         return answer
+    
