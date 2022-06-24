@@ -11,4 +11,3 @@ class Solution(object):
             anagrams[tuple(counter)].append(s)
     
         return anagrams.values()
-        
