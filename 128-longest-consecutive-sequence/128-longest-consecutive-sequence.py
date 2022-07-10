@@ -4,13 +4,20 @@ class Solution(object):
         
         max_len = 0
         
-        for n in nums:
-            if n-1 not in nums:
-                curr_len = 1
+        while nums:
+            n = nums.pop()
+            
+            l = n - 1
+            r = n + 1
+            
+            while l in nums:
+                nums.remove(l)
+                l -= 1
                 
-                while n+curr_len in nums:
-                    curr_len += 1
-                
-                max_len = max(max_len, curr_len)
+            while r in nums:
+                nums.remove(r)
+                r += 1
+            
+            max_len = max(max_len, r-l-1)   
             
         return max_len
