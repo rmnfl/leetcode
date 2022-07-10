@@ -14,3 +14,4 @@ class Solution(object):
                 max_len = max(max_len, curr_len)
             
         return max_len
+    
