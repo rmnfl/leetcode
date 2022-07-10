@@ -2,8 +2,8 @@ class Solution(object):
     def isValidSudoku(self, board):
         return (self.isSquaresValid(board) and 
                 self.isHorizontalLinesValid(board) and 
-                self.isVerticalLinesValid(board))
-            
+                self.isVerticalLinesValid(board))  
+    
     
     def isHorizontalLinesValid(self, board):
         for i in board:
@@ -19,6 +19,7 @@ class Solution(object):
             if len(line) != len(set(line)):
                 return False
         return True
+    
     
     def isSquaresValid(self, board):
         for i in range(0, 7, 3):
