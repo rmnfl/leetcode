@@ -28,4 +28,3 @@ class Solution(object):
                 if len(square) != len(set(square)):
                     return False
         return True
-    
