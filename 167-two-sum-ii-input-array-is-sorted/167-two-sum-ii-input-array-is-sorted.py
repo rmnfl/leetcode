@@ -9,3 +9,4 @@ class Solution:
                 r -= 1
             else:
                 return [l+1, r+1]
+            
