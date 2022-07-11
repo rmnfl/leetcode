@@ -6,13 +6,12 @@ class Solution:
         result = 0
         
         while l < r:
-            curr_result = min(height[l], height[r]) * (r-l)
-            
-            result = max(result, curr_result)
+            result = max(result, min(height[l], height[r])*(r - l))
             
             if height[l] < height[r]:
                 l += 1
             else:
                 r -= 1
-                
+            
         return result
+    
