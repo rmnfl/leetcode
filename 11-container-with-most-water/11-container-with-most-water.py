@@ -14,4 +14,3 @@ class Solution:
                 r -= 1
             
         return result
-    
