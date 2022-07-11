@@ -3,17 +3,20 @@ class Solution(object):
         if len(nums) == 0:
             return 0
         
-        length = 1;
-        longest_sequence = 1;
         nums.sort()
         
-        for i in range(len(nums) - 1):
-            if nums[i] == nums[i + 1]:
+        curr_len = 1
+        max_len = 1
+        
+        for i in range(1, len(nums)):
+            if nums[i] == nums[i-1]:
                 continue
-            elif nums[i] + 1 == nums[i + 1]:
-                length += 1
+            elif nums[i] == nums[i-1]+1:
+                curr_len += 1
             else:
-                length = 1
-            longest_sequence = max(longest_sequence, length)
+                curr_len = 1
             
-        return longest_sequence
+            max_len = max(max_len, curr_len)
+            
+        
+        return max_len
