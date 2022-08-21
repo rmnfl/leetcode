@@ -1,13 +1,15 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         buy = sell = prices[0]
-        result = 0
+        max_profit = 0
         
-        for i, p in enumerate(prices):
-            if p > sell:
-                sell = p
-                result = max(result, sell - buy)
-            elif p < buy:
-                buy = sell = p
+        for i, price in enumerate(prices):
+            if price > sell:
+                sell = price
+                max_profit = max(max_profit, sell - buy)
+            elif price < buy:
+                buy = sell = price
                 
-        return result
+        return max_profit
+                
+        
