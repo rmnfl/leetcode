@@ -13,3 +13,4 @@ class Solution:
             chars[char] = i
         
         return max_len
+    
