@@ -1,27 +1,14 @@
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = list()
+        mapping = {")":"(", "}":"{", "]":"["}
 
         for char in s:
-            if char in ['(', '{', '[']:
+            if char in mapping.values():
                 stack.append(char)
             else:
-                if not stack:
+                if not stack or stack.pop() != mapping[char]:
                     return False
-                match char:
-                    case ')':
-                        if stack[-1] != '(':
-                            return False
-                        stack.pop()
-                    case '}':
-                        if stack[-1] != '{':
-                            return False
-                        stack.pop()
-                    case ']':
-                        if stack[-1] != '[':
-                            return False
-                        stack.pop()
-            
         if stack:
             return False
         return True
