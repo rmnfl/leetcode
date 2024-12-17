@@ -23,7 +23,7 @@ class MyStack:
         
 
     def empty(self) -> bool:
-        return not self.q1
+        return len(self.q1) == 0
 
 
 # Your MyStack object will be instantiated and called as such:
